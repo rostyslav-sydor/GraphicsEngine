@@ -7,7 +7,7 @@ int main() {
 	engine.createWindow("Light Demo");
 	// Drawing Triangles
 	
-	BasicLightTexture floormat{ "res/bunny.jpg", glm::vec3(0.1f), glm::vec3(0.6f), glm::vec3(1.0f), 256 };
+	BasicLightTexture floormat{ "res/bunny.jpg", glm::vec3(0.4f), glm::vec3(0.0f), glm::vec3(0.6f), 32 };
 	BasicLightColor mat{ glm::vec3{0.2f, 0.4f, 0.6f} };
 	
 	GraphicObject sphere{ floormat, "res/bunny.obj" };

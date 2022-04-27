@@ -28,11 +28,13 @@ public:
 
 	void setParent(const Model* model);
 
+
+	Transformation transformation;
 private:
 	void processNode(aiNode* node, const aiScene* scene, aiMatrix4x4 parentTransform);
 	Mesh processMesh(aiMesh* mesh, const aiScene* scene, aiMatrix4x4 parentTransform);
 
 	std::vector<Mesh> meshes;
-	Transformation transformation;
+	
 	const Model* parent;
 };

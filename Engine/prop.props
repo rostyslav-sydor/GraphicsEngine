@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ImportGroup Label="PropertySheets" />
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_PropertySheetDisplayName>IncludeEngineLibs</_PropertySheetDisplayName>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(SolutionDir)Engine\3rdparty\assimp\include;$(SolutionDir)Engine\3rdparty\stb_image;$(SolutionDir)Engine\3rdparty\glm\include;$(SolutionDir)Engine\3rdparty\glfw\include;$(SolutionDir)Engine\3rdparty\glad\include;$(SolutionDir)Engine\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>D:\msys64\home\Comrade_Kostya\AKS\GraphicsProject\Engine\3rdparty\assimp\src;D:\msys64\home\Comrade_Kostya\AKS\GraphicsProject\Engine\3rdparty\glm\src;D:\msys64\home\Comrade_Kostya\AKS\GraphicsProject\Engine\3rdparty\glfw\src;D:\msys64\home\Comrade_Kostya\AKS\GraphicsProject\Engine\3rdparty\glew\src;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>assimp.lib;glm_static.lib;glfw3.lib;opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup />
+</Project>

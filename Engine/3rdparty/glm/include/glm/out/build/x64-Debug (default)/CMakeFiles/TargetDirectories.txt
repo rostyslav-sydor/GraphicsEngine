@@ -1,0 +1,2 @@
+D:/msys64/home/Comrade_Kostya/AKS/GraphicsProject/include/glm/out/build/x64-Debug (default)/CMakeFiles/edit_cache.dir
+D:/msys64/home/Comrade_Kostya/AKS/GraphicsProject/include/glm/out/build/x64-Debug (default)/CMakeFiles/rebuild_cache.dir

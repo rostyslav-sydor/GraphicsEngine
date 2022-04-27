@@ -28,8 +28,5 @@
     <Image Include="res\crate.jpg">
       <Filter>Resource Files</Filter>
     </Image>
-    <Image Include="res\container.jpg">
-      <Filter>Resource Files</Filter>
-    </Image>
   </ItemGroup>
 </Project>

@@ -144,19 +144,10 @@
   <ItemGroup>
     <Image Include="res\backpack.jpg" />
     <Image Include="res\bunny.jpg" />
-    <Image Include="res\gun.jpg" />
-    <Image Include="res\tank.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Object Include="res\backpack.obj" />
     <Object Include="res\bunny.obj" />
-    <Object Include="res\tank.obj" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="res\backpack.fbx" />
-    <None Include="res\gun.fbx" />
-    <None Include="res\room.blend" />
-    <None Include="res\tank.blend" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

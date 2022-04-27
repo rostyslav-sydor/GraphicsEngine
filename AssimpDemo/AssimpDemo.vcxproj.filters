@@ -26,12 +26,6 @@
     <Image Include="res\bunny.jpg">
       <Filter>Resource Files</Filter>
     </Image>
-    <Image Include="res\gun.jpg">
-      <Filter>Resource Files</Filter>
-    </Image>
-    <Image Include="res\tank.jpg">
-      <Filter>Resource Files</Filter>
-    </Image>
   </ItemGroup>
   <ItemGroup>
     <Object Include="res\backpack.obj">
@@ -40,22 +34,5 @@
     <Object Include="res\bunny.obj">
       <Filter>Resource Files</Filter>
     </Object>
-    <Object Include="res\tank.obj">
-      <Filter>Resource Files</Filter>
-    </Object>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="res\backpack.fbx">
-      <Filter>Resource Files</Filter>
-    </None>
-    <None Include="res\gun.fbx">
-      <Filter>Resource Files</Filter>
-    </None>
-    <None Include="res\room.blend">
-      <Filter>Resource Files</Filter>
-    </None>
-    <None Include="res\tank.blend">
-      <Filter>Resource Files</Filter>
-    </None>
   </ItemGroup>
 </Project>

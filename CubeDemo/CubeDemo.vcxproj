@@ -147,7 +147,6 @@
     <None Include="res\crate.blend" />
   </ItemGroup>
   <ItemGroup>
-    <Image Include="res\container.jpg" />
     <Image Include="res\crate.jpg" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

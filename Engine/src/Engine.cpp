@@ -158,9 +158,6 @@ void Engine::addObject(GraphicObject& object) {
 }
 
 void Engine::setParent(int child, int parent) {
-	std::cout << child << parent << ' ' << objects.size() << std::endl;
 	if (child != parent && child < objects.size() && parent < objects.size())
 		objects[child].model.setParent(&objects[parent].model);
-	else
-		std::cout << "zhopa" << std::endl;
 }

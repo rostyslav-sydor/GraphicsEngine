@@ -3,16 +3,16 @@
 
 int main() {
 	// Initialization
-	Engine engine = Engine::Engine(1600, 900);
+	Engine engine{1600, 900};
 	engine.createWindow("Light Demo");
+
 	// Drawing Triangles
 	
-	BasicLightTexture floormat{ "res/bunny.jpg", glm::vec3(0.4f), glm::vec3(0.0f), glm::vec3(0.6f), 32 };
-	BasicLightColor mat{ glm::vec3{0.2f, 0.4f, 0.6f} };
+	BasicLightTexture bunnymat{ "res/bunny.jpg", glm::vec3(0.1f), glm::vec3(0.4f), glm::vec3(0.5f), 128 };
+	//BasicLightColor mat{ glm::vec3{0.2f, 0.4f, 0.6f} };
 	
-	GraphicObject sphere{ floormat, "res/bunny.obj" };
-	//sphere.Scale(0.005f, 0.005f, 0.005f);
-	engine.addObject(sphere);
+	GraphicObject bunny{ bunnymat, "res/bunny.obj" };
+	engine.addObject(bunny);
 
 	// Main rendering loop
 

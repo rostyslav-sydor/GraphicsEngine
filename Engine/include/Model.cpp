@@ -39,9 +39,6 @@ void Model::setTranslation(float x, float y, float z) { transformation.setTransl
 void Model::setRotation(float angle, float x, float y, float z) { transformation.setRotation(angle, x, y, z); }
 void Model::setScale(float x, float y, float z) { transformation.setScale(x, y, z); }
 
-
-
-
 void Model::processNode(aiNode* node, const aiScene* scene, aiMatrix4x4 parentTransform) {
 	aiMatrix4x4 thisTransform = parentTransform * node->mTransformation;
 	for (unsigned int i = 0; i < node->mNumMeshes; i++)

@@ -57,7 +57,7 @@ public:
 		glBindTexture(GL_TEXTURE_2D, texture.getId());
 		static glm::vec3 lightPos{ 1.0f, 0.1f, 0.0f };
 		lightPos.x = sin(glfwGetTime()/2);
-		lightPos.z = cos(glfwGetTime()/2);
+		lightPos.z = -cos(glfwGetTime()/2);
 		shader.setUniform("lightPos", lightPos);
 		shader.setUniform("lightColor", glm::vec3(1.0f, 1.0f, 1.0f));
 		shader.setUniform("mat.ambient", ambient);

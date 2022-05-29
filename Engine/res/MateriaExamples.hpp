@@ -125,7 +125,7 @@ public:
 	void Apply() override {
 		glUseProgram(shader.getId());
 		shader.setUniform("col", color);
-		static glm::vec3 lightPos{ 1.0f, 0.5f, 0.0f };
+		static glm::vec3 lightPos{ 3.0f, 0.5f, 0.0f };
 		/*lightPos.x = 2 * sin(glfwGetTime()/2);
 		lightPos.z = 2 * cos(glfwGetTime()/2);*/
 		shader.setUniform("lightPos", lightPos);

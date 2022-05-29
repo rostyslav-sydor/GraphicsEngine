@@ -1,7 +1,7 @@
 #pragma once
-#include <Mesh.hpp>
-#include <Transformation.hpp>
-#include <Camera.hpp>
+
+#include <GraphicObject.hpp>
+#include <Util.hpp>
 
 #include <vector>
 
@@ -9,14 +9,10 @@
 #include <assimp/scene.h>
 #include <assimp/postprocess.h>
 
+
 class Model {
 public:
-	Model(std::string filename, Transformation transformation = {});
-	Model(Mesh mesh, Transformation transformation = {});
-
-	void Render() const;
-	
-	glm::mat4 getTransformation() const;
+	Model(std::string filename, std::shared_ptr<Material> material);
 	
 	void Translate(float x, float y, float z);
 	void Rotate(float angle, float x, float y, float z);
@@ -26,15 +22,19 @@ public:
 	void setRotation(float angle, float x, float y, float z);
 	void setScale(float x, float y, float z);
 
-	void setParent(const Model* model);
-
-
-	Transformation transformation;
+	std::vector<GraphicObject> meshes;
 private:
-	void processNode(aiNode* node, const aiScene* scene, aiMatrix4x4 parentTransform);
-	Mesh processMesh(aiMesh* mesh, const aiScene* scene, aiMatrix4x4 parentTransform);
+	void processNode(aiNode* node, 
+					 const aiScene* scene,
+					 const aiMatrix4x4& aiParentTransform,
+					 std::shared_ptr<Transformation> parentTransform,
+					 std::shared_ptr<Material> material);
 
-	std::vector<Mesh> meshes;
+	GraphicObject processMesh(	aiMesh* mesh,
+								const aiScene* scene,
+								const aiMatrix4x4& aiParentTransform,
+								std::shared_ptr<Transformation> parentTransform,
+								std::shared_ptr<Material> material);
 	
-	const Model* parent;
+	std::shared_ptr<Transformation> transformation;
 };

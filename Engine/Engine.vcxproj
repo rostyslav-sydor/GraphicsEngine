@@ -154,7 +154,7 @@
     <ClCompile Include="src\Engine.cpp" />
     <ClCompile Include="src\GraphicObject.cpp" />
     <ClCompile Include="src\Material.cpp" />
-    <ClCompile Include="src\Mesh.cpp" />
+    <ClCompile Include="src\Geometry.cpp" />
     <ClCompile Include="src\Shader.cpp" />
     <ClCompile Include="src\Texture.cpp" />
   </ItemGroup>
@@ -163,12 +163,13 @@
     <ClInclude Include="include\Engine.hpp" />
     <ClInclude Include="include\GraphicObject.hpp" />
     <ClInclude Include="include\Material.hpp" />
-    <ClInclude Include="include\Mesh.hpp" />
+    <ClInclude Include="include\Geometry.hpp" />
     <ClInclude Include="include\Model.hpp" />
     <ClInclude Include="include\geometryPrimitives.hpp" />
     <ClInclude Include="include\Shader.hpp" />
     <ClInclude Include="include\Texture.hpp" />
     <ClInclude Include="include\Transformation.hpp" />
+    <ClInclude Include="include\Util.hpp" />
     <ClInclude Include="include\Vertex.hpp" />
     <ClInclude Include="res\MateriaExamples.hpp" />
   </ItemGroup>

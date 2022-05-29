@@ -20,6 +20,11 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AssimpDemo", "AssimpDemo\As
 		{4D318ACA-2A0B-4A41-9377-262552314B9A} = {4D318ACA-2A0B-4A41-9377-262552314B9A}
 	EndProjectSection
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CullingDemo", "CullingDemo\CullingDemo.vcxproj", "{13DDD046-113B-4FAD-BBF6-3D794E8AB25C}"
+	ProjectSection(ProjectDependencies) = postProject
+		{4D318ACA-2A0B-4A41-9377-262552314B9A} = {4D318ACA-2A0B-4A41-9377-262552314B9A}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -60,6 +65,13 @@ Global
 		{E5330A2C-F1C4-4B9F-AE59-EF8B80366992}.Release|x64.Build.0 = Release|x64
 		{E5330A2C-F1C4-4B9F-AE59-EF8B80366992}.Release|x86.ActiveCfg = Release|Win32
 		{E5330A2C-F1C4-4B9F-AE59-EF8B80366992}.Release|x86.Build.0 = Release|Win32
+		{13DDD046-113B-4FAD-BBF6-3D794E8AB25C}.Debug|x64.ActiveCfg = Debug|x64
+		{13DDD046-113B-4FAD-BBF6-3D794E8AB25C}.Debug|x64.Build.0 = Debug|x64
+		{13DDD046-113B-4FAD-BBF6-3D794E8AB25C}.Debug|x86.ActiveCfg = Debug|x64
+		{13DDD046-113B-4FAD-BBF6-3D794E8AB25C}.Release|x64.ActiveCfg = Release|x64
+		{13DDD046-113B-4FAD-BBF6-3D794E8AB25C}.Release|x64.Build.0 = Release|x64
+		{13DDD046-113B-4FAD-BBF6-3D794E8AB25C}.Release|x86.ActiveCfg = Release|Win32
+		{13DDD046-113B-4FAD-BBF6-3D794E8AB25C}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

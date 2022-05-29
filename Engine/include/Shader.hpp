@@ -12,6 +12,8 @@ class Shader
 public:
 	Shader();
 	Shader(const char* vertexShader, const char* fragmentShader);
+	Shader(const char* vertexShader, const char* geometryShader, const char* fragmentShader);
+
 	void compileShader(const char* vertexShader, const char* fragmentShader);
 
 	void addShader(const char* text, int type);

@@ -1,12 +1,12 @@
 ﻿#pragma once
-#include <Mesh.hpp>
+#include <Geometry.hpp>
 #define _USE_MATH_DEFINES
 #include <math.h>
 
 #include <glm/vec3.hpp>
 
 namespace geometryPrimitives {
-	//Mesh generateSphere(int points) {
+	//Geometry generateSphere(int points) {
 	//	std::vector<glm::vec3> vertices;
 	//	std::vector<glm::vec3> indices;
 	//	for (float j = 1; j > -1; j -= 2.0f/points) {
@@ -23,7 +23,7 @@ namespace geometryPrimitives {
 
 	//}
 
-	Mesh generatePlane(glm::vec3 Ѣ, glm::vec3 ь, glm::vec3 b, glm::vec3 ъ) {
+	Geometry generatePlane(glm::vec3 Ѣ, glm::vec3 ь, glm::vec3 b, glm::vec3 ъ) {
 		std::vector<Vertex> vertices;
 		std::vector<unsigned int> indices{0,2,1,
 										  2,3,1,
@@ -43,6 +43,8 @@ namespace geometryPrimitives {
 		vertices.push_back(Vertex{ b, normal, glm::vec2(0, 1) });
 		vertices.push_back(Vertex{ ъ, normal, glm::vec2(1, 1) });
 
-		return Mesh(vertices, indices);
+		glm::vec3 center = (ь - b) / 2.0f;
+
+		return Geometry(vertices, indices, center);
 	}
 }

@@ -8,18 +8,29 @@ Shader::Shader(const char* vertexShader, const char* fragmentShader): Shader() {
 	linkProgram();
 }
 
+Shader::Shader(const char* vertexShader, const char* geometryShader,  const char* fragmentShader) : Shader() {
+	addShader(vertexShader, GL_VERTEX_SHADER);
+	addShader(geometryShader, GL_GEOMETRY_SHADER);
+	addShader(fragmentShader, GL_FRAGMENT_SHADER);
+	linkProgram();
+}
+
 void Shader::compileShader(const char* vertexShader, const char* fragmentShader) {
 	addShader(vertexShader, GL_VERTEX_SHADER);
 	addShader(fragmentShader, GL_FRAGMENT_SHADER);
 	linkProgram();
 }
+
 void Shader::linkProgram() {
 	glLinkProgram(id);
 
 	int success;
+	char infoLog[512];
 	glGetProgramiv(id, GL_LINK_STATUS, &success);
-	if (!success) {
-		std::cout << "Failed to link shader program." << std::endl;
+	if (!success)
+	{
+		glGetProgramInfoLog(id, 512, NULL, infoLog);
+		std::cout << "Failes to link program\n" << infoLog << std::endl;
 		exit(1);
 	}
 
@@ -40,7 +51,7 @@ void Shader::addShader(const char* text, int type) {
 	if (!success)
 	{
 		glGetShaderInfoLog(shader, 512, NULL, infoLog);
-		std::cerr << "Error: failed to compile shader\n" << infoLog << std::endl;
+		std::cerr << "Error: failed to compile shader\nType: " << type << '\n' << infoLog << std::endl;
 	}
 	glAttachShader(id, shader);
 }

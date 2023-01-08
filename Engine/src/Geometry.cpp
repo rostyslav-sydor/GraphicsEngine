@@ -2,7 +2,7 @@
 
 Geometry::Geometry(const std::string& filename) {
 	Assimp::Importer import;
-	const aiScene* scene = import.ReadFile(filename, aiProcess_Triangulate);
+	const aiScene* scene = import.ReadFile(filename, aiProcess_GenNormals | aiProcess_Triangulate);
 
 	if (!scene || !scene->mRootNode || scene->mFlags & AI_SCENE_FLAGS_INCOMPLETE) {
 		std::cerr << "ERROR::ASSIMP::" << import.GetErrorString() << std::endl;

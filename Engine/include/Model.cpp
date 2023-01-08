@@ -2,7 +2,7 @@
 
 Model::Model(std::string filename, std::shared_ptr<Material> material) {
 	Assimp::Importer import;
-	const aiScene* scene = import.ReadFile(filename, aiProcess_Triangulate);
+	const aiScene* scene = import.ReadFile(filename, aiProcess_GenNormals | aiProcess_Triangulate);
 
 	if (!scene || !scene->mRootNode || scene->mFlags & AI_SCENE_FLAGS_INCOMPLETE) {
 		std::cerr << "ERROR::ASSIMP::" << import.GetErrorString() << std::endl;
@@ -78,6 +78,6 @@ GraphicObject Model::processMesh(	aiMesh* mesh,
 
 	auto thisTransform = std::make_shared<Transformation>();
 	thisTransform->setParent(parentTransform);
-
+	std::cout << vertices.size() << std::endl;
 	return GraphicObject{material, newMesh, thisTransform};
 }

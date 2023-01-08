@@ -44,7 +44,7 @@ private:
 
 class BasicLightTexture : public Material {
 public:
-	BasicLightTexture(const char* textureFile, glm::vec3 ambient = glm::vec3(0.1f), glm::vec3 diffuse = glm::vec3(0.6f), glm::vec3 specular = glm::vec3(0.3f), int shininess = 64) : Material{ambient, diffuse, specular, shininess}, texture{ Texture{textureFile} } {
+	BasicLightTexture(const char* textureFile, glm::vec3 ambient = glm::vec3(0.1f), glm::vec3 diffuse = glm::vec3(0.7f), glm::vec3 specular = glm::vec3(0.3f), int shininess = 64) : Material{ambient, diffuse, specular, shininess}, texture{ Texture{textureFile} } {
 		this->shader = Shader{ simpleTextureVertexShaderSource, simpleTextureFragmentShaderSource };
 	}
 
@@ -163,7 +163,7 @@ private:
 				vec3 ambient = lightColor * 0.1f;
 
 				vec3 norm = normalize(normal);
-				vec3 lightDirection = normalize(lightPos - fragPos);
+				vec3 lightDirection = vec3(1.0f, 1.0f, 1.0f);
 				vec3 diffuse = lightColor * max(dot(lightDirection, norm), 0.0);
 				vec3 viewDir = normalize(viewPos - fragPos);
 				vec3 halfwayDir = normalize(lightDirection + viewDir);
